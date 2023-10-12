@@ -5,4 +5,4 @@ class Employee(models.Model):
     salary = models.DecimalField(max_digits=10, decimal_places=3)
 
     def __str__(self):
-        return self.id+self.name+self.salary
+        return self.name
