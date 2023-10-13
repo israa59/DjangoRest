@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from for_serializer.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('firstApp/', include('firstApp.urls'))
+    path('firstApp/', include('firstApp.urls')),
+    path('students/', student_list),
+    path('students/<int:pk>', student_pk),
 ]

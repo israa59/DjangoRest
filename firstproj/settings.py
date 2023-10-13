@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'firstApp',
-    'for_serializer'
+    'for_serializer',
+    'cbv_serializer'
 ]
 
 MIDDLEWARE = [
