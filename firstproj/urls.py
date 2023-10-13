@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from for_serializer.views import *
+from cbv_serializer import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('firstApp/', include('firstApp.urls')),
     path('students/', student_list),
     path('students/<int:pk>', student_pk),
+    path('studentscbv/', views.StudentCList.as_view()),
+    path('studentscbv/<int:pk>', views.StudentCDetail.as_view())
 ]
